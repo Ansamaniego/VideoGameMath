@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.videogamemath.controllers.VentanaInicioSesionController">
+   <children>
+      <Pane layoutX="100.0" layoutY="153.0" prefHeight="600.0" prefWidth="400.0" style="-fx-background-color: linear-gradient(to bottom, #FF0000, #0000FF); -fx-border-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="154.0" fitWidth="252.0" layoutX="74.0" layoutY="71.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Images/Logo.png" />
+               </image>
+            </ImageView>
+            <VBox alignment="CENTER" layoutX="74.0" layoutY="237.0" prefHeight="185.0" prefWidth="252.0">
+               <children>
+                  <Label text="USUARIO" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="10.0" />
+                     </padding>
+                  </Label>
+                  <TextField fx:id="txtUsuario" prefHeight="22.0" prefWidth="249.0" promptText="Usuario">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Label text="CONTRASEÑA" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="10.0" />
+                     </padding>
+                  </Label>
+                  <StackPane prefHeight="30.0" prefWidth="252.0">
+                     <children>
+                        <TextField fx:id="txtMaskPass" promptText="1234">
+                           <StackPane.margin>
+                              <Insets bottom="10.0" />
+                           </StackPane.margin>
+                        </TextField>
+                        <PasswordField fx:id="txtPass" promptText="1234">
+                           <StackPane.margin>
+                              <Insets bottom="10.0" />
+                           </StackPane.margin>
+                        </PasswordField>
+                     </children>
+                  </StackPane>
+                  <CheckBox fx:id="checkVerPass" mnemonicParsing="false" text="VER CONTRASEÑA" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="10.0" />
+                     </padding>
+                  </CheckBox>
+               </children>
+            </VBox>
+            <HBox alignment="CENTER" layoutX="69.0" layoutY="422.0" prefHeight="58.0" prefWidth="269.0">
+               <children>
+                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#btnInicioSesion" prefHeight="42.0" prefWidth="115.0" text="INICIAR SESION" textOverrun="CENTER_ELLIPSIS">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#btnRegistrarse" prefHeight="42.0" prefWidth="115.0" text="REGISTRARSE" />
+               </children>
+            </HBox>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
