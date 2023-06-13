@@ -8,23 +8,23 @@ import javafx.fxml.FXML;
 public class ControllerVentanaOperaciones {
 
     @FXML
-    void btnDivision(ActionEvent event) {
-        
+    void btnDivision(ActionEvent event) throws IOException {
+        App.setRoot("VentanaDificultadDivision");
     }
 
     @FXML
-    void btnMulti(ActionEvent event) {
-
+    void btnMulti(ActionEvent event) throws IOException {
+        App.setRoot("VentanaDificultadMultiplicacion");
     }
 
     @FXML
-    void btnResta(ActionEvent event) {
-
+    void btnResta(ActionEvent event) throws IOException {
+        App.setRoot("VentanaDificultadResta");
     }
 
     @FXML
-    void btnSuma(ActionEvent event) {
-
+    void btnSuma(ActionEvent event) throws IOException {
+        App.setRoot("VentanaDificultadSuma");
     }
 
     @FXML
