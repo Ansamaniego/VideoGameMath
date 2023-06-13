@@ -9,7 +9,7 @@ public class ControllerVentanaOperaciones {
 
     @FXML
     void btnDivision(ActionEvent event) {
-
+        
     }
 
     @FXML
