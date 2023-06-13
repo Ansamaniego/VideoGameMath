@@ -31,5 +31,11 @@ public class VentanaInicioSesionController {
     void btnRegistrarse(ActionEvent event) throws IOException {
         App.setRoot("VentanaRegistrarse");
     }
+    
+    
+    @FXML
+    void BtnVolverInicioSesion(ActionEvent event) throws IOException {
+        App.setRoot("VentanaInicial");
+    }
 
 }

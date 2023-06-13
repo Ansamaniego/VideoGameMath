@@ -29,7 +29,7 @@ public class ControllerVentanaOperaciones {
 
     @FXML
     void btnVolverOperaciones(ActionEvent event) throws IOException {
-        App.setRoot("VentanaDificultad");
+        App.setRoot("VentanaInicial");
     }
 
 }
