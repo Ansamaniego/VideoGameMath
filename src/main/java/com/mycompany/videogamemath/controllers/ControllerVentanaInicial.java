@@ -16,7 +16,7 @@ public class ControllerVentanaInicial {
     }
 
     @FXML
-    void btnJugarInvitado(ActionEvent event) {
-        
+    void btnJugarInvitado(ActionEvent event) throws IOException {
+        App.setRoot("VentanaOperaciones");
     }
 }

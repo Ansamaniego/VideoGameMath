@@ -24,7 +24,7 @@ public class VentanaInicioSesionController {
 
     @FXML
     void btnInicioSesion(ActionEvent event) throws IOException {
-        App.setRoot("VentanaDificultad");
+        App.setRoot("VentanaOperaciones");
     }
 
     @FXML
