@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.videogamemath.controllers.gameControllerMulFacil">
+   <children>
+      <Pane layoutX="-11.0" layoutY="50.0" prefHeight="600.0" prefWidth="411.0" style="-fx-background-color: linear-gradient(to bottom, #FF0000, #0000FF); -fx-border-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox alignment="CENTER" layoutX="24.0" layoutY="143.0" prefHeight="139.0" prefWidth="353.0">
+               <children>
+                  <Pane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#f2f2f2" height="139.0" stroke="BLACK" width="351.0" />
+                        <Label id="questionLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="139.0" prefWidth="353.0">
+                           <font>
+                              <Font size="40.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" layoutX="24.0" layoutY="354.0" prefHeight="94.0" prefWidth="170.0">
+               <children>
+                  <Button id="option1Button" mnemonicParsing="false" onAction="#btnFacilDiv" prefHeight="107.0" prefWidth="170.0">
+                     <font>
+                        <Font name="Pristina" size="20.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" layoutX="207.0" layoutY="354.0" prefHeight="94.0" prefWidth="170.0">
+               <children>
+                  <Button id="option2Button" mnemonicParsing="false" onAction="#btnFacilDiv" prefHeight="94.0" prefWidth="170.0">
+                     <font>
+                        <Font name="Pristina" size="20.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" layoutX="207.0" layoutY="460.0" prefHeight="94.0" prefWidth="170.0">
+               <children>
+                  <Button id="option4Button" mnemonicParsing="false" onAction="#btnFacilDiv" prefHeight="107.0" prefWidth="170.0">
+                     <font>
+                        <Font name="Pristina" size="20.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" layoutX="24.0" layoutY="460.0" prefHeight="94.0" prefWidth="170.0">
+               <children>
+                  <Button id="option3Button" mnemonicParsing="false" onAction="#btnFacilDiv" prefHeight="107.0" prefWidth="170.0">
+                     <font>
+                        <Font name="Pristina" size="20.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+            <VBox id="back" alignment="CENTER" layoutX="14.0" layoutY="13.0" prefHeight="28.0" prefWidth="62.0">
+               <children>
+                  <Button id="backButton" mnemonicParsing="false" onAction="#btnFacilDiv" prefHeight="107.0" prefWidth="170.0" text="←">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#320000" height="69.0" opacity="0.53" stroke="#320000" strokeType="INSIDE" width="400.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#320000" height="34.0" layoutX="-3.0" layoutY="69.0" opacity="0.46" stroke="#320000" strokeType="INSIDE" width="406.0" />
+            <Pane layoutX="122.0" layoutY="7.0" prefHeight="57.0" prefWidth="158.0">
+               <children>
+                  <Label layoutX="48.0" layoutY="-1.0" text="Puntos:" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label id="Points" alignment="CENTER" contentDisplay="CENTER" layoutX="57.0" layoutY="28.0" text="0000" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutX="101.0" layoutY="68.0" prefHeight="34.0" prefWidth="200.0" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
