@@ -9,7 +9,9 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
 public class VentanaInicioSesionController {
-
+ /* 
+    Controlador de la ventana de inicio de sesion
+ */
     @FXML
     private CheckBox checkVerPass;
 
@@ -24,17 +26,27 @@ public class VentanaInicioSesionController {
 
     @FXML
     void btnInicioSesion(ActionEvent event) throws IOException {
+        /*
+        Boton que permite iniciar sesion, si ya tenemos una cuenta
+        */
         App.setRoot("VentanaOperaciones");
     }
 
     @FXML
     void btnRegistrarse(ActionEvent event) throws IOException {
+        /*
+        Boton que nos llevara a la vista donde nos permitira crear nuestra 
+        cuenta por primera vez
+        */
         App.setRoot("VentanaRegistrarse");
     }
     
     
     @FXML
     void BtnVolverInicioSesion(ActionEvent event) throws IOException {
+        /*
+        Boton para volver a la pantalla Inicial del juego.
+        */
         App.setRoot("VentanaInicial");
     }
 
