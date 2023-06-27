@@ -15,8 +15,9 @@ public class ControllerVentanaDificultadResta {
     }
 
     @FXML
-    void btnFacilResta(ActionEvent event) {
-        //Boton para la seleccion de la dificultad Facil
+    void btnFacilResta(ActionEvent event) throws IOException {
+        //Boton para seleccionar la dificultad dificil
+        App.setRoot("VentanaPreguntasRestaFacil");
     }
 
     @FXML
