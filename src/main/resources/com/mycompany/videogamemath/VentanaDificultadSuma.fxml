@@ -8,7 +8,6 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.videogamemath.controllers.ControllerVentanaDificultadSuma">
    <children>
       <Pane layoutX="200.0" layoutY="50.0" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: linear-gradient(to bottom, #FF0000, #0000FF); -fx-border-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
@@ -34,7 +33,7 @@
             </VBox>
             <VBox alignment="CENTER" layoutX="114.0" layoutY="210.0" prefHeight="268.0" prefWidth="173.0">
                <children>
-                  <Button mnemonicParsing="false" onAction="#btnFacilSuma" prefHeight="52.0" prefWidth="141.0" text="Facil">
+                  <Button fx:id="btnSumFacil" mnemonicParsing="false" onAction="#btnFacilSuma" prefHeight="52.0" prefWidth="141.0" text="Facil">
                      <VBox.margin>
                         <Insets bottom="10.0" top="10.0" />
                      </VBox.margin>
@@ -42,7 +41,7 @@
                         <Font name="Pristina" size="20.0" />
                      </font>
                   </Button>
-                  <Button mnemonicParsing="false" onAction="#btnNormalSuma" prefHeight="52.0" prefWidth="141.0" text="Normal">
+                  <Button fx:id="btnSumNormal" mnemonicParsing="false" onAction="#btnNormalSuma" prefHeight="52.0" prefWidth="141.0" text="Normal">
                      <VBox.margin>
                         <Insets bottom="10.0" top="10.0" />
                      </VBox.margin>
@@ -50,7 +49,7 @@
                         <Font name="Pristina" size="20.0" />
                      </font>
                   </Button>
-                  <Button mnemonicParsing="false" onAction="#btnDificilSuma" prefHeight="52.0" prefWidth="141.0" text="Dificil ">
+                  <Button fx:id="btnSumHard" mnemonicParsing="false" onAction="#btnDificilSuma" prefHeight="52.0" prefWidth="141.0" text="Dificil ">
                      <VBox.margin>
                         <Insets bottom="10.0" top="10.0" />
                      </VBox.margin>
