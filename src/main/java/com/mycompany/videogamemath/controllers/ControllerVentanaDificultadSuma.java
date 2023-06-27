@@ -29,16 +29,11 @@ public class ControllerVentanaDificultadSuma {
     @FXML
     void btnFacilSuma(ActionEvent event) throws IOException {
         App.setRoot("VentanaPreguntas");
-        int numA = GenerarNumRandomFacil1();
-        int numB = GenerarNumRandomFacil1();
-        int numC = GenerarNumRandomFacil1();
-        int numD = GenerarNumRandomFacil1();
-
     }
 
     @FXML
     void btnNormalSuma(ActionEvent event) throws IOException {
-        App.setRoot("VentanaPreguntas");
+        App.setRoot("VentanaPreguntasSumNormal");
     }
 
     @FXML

@@ -14,11 +14,10 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 
-public class ControllerVentanaPreguntas implements Initializable {
+public class ControllerVentanaPreguntasSumNormal implements Initializable {
     
     ControllerVentanaDificultadSuma controlador;
    
-    
     @FXML
     private Button btnIdA;
     @FXML
@@ -81,7 +80,7 @@ public class ControllerVentanaPreguntas implements Initializable {
     @FXML
     void btnSiguiente(ActionEvent event) throws IOException{
         
-        if (contador < 5) {
+        if (contador < 9) {
             contador ++;
             labelRespCorrect.setText("");
             labRespUser.setText("");
@@ -108,8 +107,8 @@ public class ControllerVentanaPreguntas implements Initializable {
     
     private void generateQuestion() {
         // Genera una pregunta y opciones de respuesta aleatorias
-        int num1 = (int) (Math.random() * 10) + 1;
-        int num2 = (int) (Math.random() * 10) + 1;
+        int num1 = (int) (Math.random() * 100) + 1;
+        int num2 = (int) (Math.random() * 100) + 1;
         int answer = num1 + num2;
 
         currentQuestion = num1 + " + " + num2 + " = ?";
@@ -117,9 +116,9 @@ public class ControllerVentanaPreguntas implements Initializable {
 
         // Genera tres respuestas incorrectas
         answerOptions = new ArrayList<>();
+        answerOptions.add(Integer.toString(answer - (int) (Math.random() * 10) + 1));
+        answerOptions.add(Integer.toString(answer + (int) (Math.random() * 7) + 1));
         answerOptions.add(Integer.toString(answer - (int) (Math.random() * 5) + 1));
-        answerOptions.add(Integer.toString(answer + (int) (Math.random() * 6) + 1));
-        answerOptions.add(Integer.toString(answer - (int) (Math.random() * 9) + 1));
 
         // Agrega la respuesta correcta a las opciones
         answerOptions.add(correctAnswer);
