@@ -8,7 +8,6 @@ import java.util.List;
 import java.util.Random;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -16,9 +15,7 @@ import javafx.scene.control.Label;
 
 public class ControllerVentanaPreguntas implements Initializable {
     
-    ControllerVentanaDificultadSuma controlador;
-   
-    
+    //Declaramos los ID de los Botones, los Labels creados en SceneBuilder
     @FXML
     private Button btnIdA;
     @FXML
@@ -39,7 +36,7 @@ public class ControllerVentanaPreguntas implements Initializable {
     private Label labelPuntos;
     
     
-    
+    //Declaramos los OnAction de los botones
     @FXML      
     void btnA(ActionEvent event) {
         String text = btnIdA.getText();
@@ -76,11 +73,16 @@ public class ControllerVentanaPreguntas implements Initializable {
         DeshabilitarBotones();
     }
     
+    //Creamos un contador para controlar la cantidad de veces que vamos a generar una Operacion diferente
     private int contador = 0;
 
     @FXML
     void btnSiguiente(ActionEvent event) throws IOException{
         
+        /*
+        Cada vez que demos click en siguiente vamos a contabilizar el click y generaremos preguntas hasta el limite asigando
+        en este caso es de 5
+        */
         if (contador < 5) {
             contador ++;
             labelRespCorrect.setText("");
@@ -93,7 +95,7 @@ public class ControllerVentanaPreguntas implements Initializable {
         }
     }
         
-
+    //Inicializamos la puntuacion, generamos la primera Operacion
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         puntos = 0;
@@ -157,6 +159,7 @@ public class ControllerVentanaPreguntas implements Initializable {
         }
     }
     
+    //Comparamos los label donde se colocan la el valor del boton oprimido y el ed la respuesta correcta
     private Boolean compararRespuesta(){
         
         if(labelRespCorrect.getText() == labRespUser.getText()){
@@ -166,10 +169,12 @@ public class ControllerVentanaPreguntas implements Initializable {
         }       
     }
     
+    //Actualizamos el Label de la puntuacion
     private void actualizarLabelPuntos(){
         labelPuntos.setText(String.valueOf(puntos));
     }
     
+    //Metodo para Deshabilitar botones
     private void DeshabilitarBotones(){
         btnIdA.setDisable(true);
         btnIdB.setDisable(true);
@@ -177,6 +182,7 @@ public class ControllerVentanaPreguntas implements Initializable {
         btnIdD.setDisable(true);   
     }
     
+    //Metodo para habilitar botones
     private void HabilitarBotones(){
         btnIdA.setDisable(false);
         btnIdB.setDisable(false);

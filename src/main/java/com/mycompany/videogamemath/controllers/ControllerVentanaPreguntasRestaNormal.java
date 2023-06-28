@@ -13,9 +13,9 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 
-public class ControllerVentanaPreguntasRestaFacil implements Initializable {
+public class ControllerVentanaPreguntasRestaNormal implements Initializable {
     
-    //Declaramos los ID de los Botones, los Labels creados en SceneBuilder
+   //Declaramos los ID de los Botones, los Labels creados en SceneBuilder
     @FXML
     private Button btnIdA;
     @FXML
@@ -34,7 +34,6 @@ public class ControllerVentanaPreguntasRestaFacil implements Initializable {
     private Label questionlabel;
     @FXML
     private Label labelPuntos;
-    
     
     //Declaramos los OnAction de los botones
     @FXML      
@@ -82,7 +81,7 @@ public class ControllerVentanaPreguntasRestaFacil implements Initializable {
         Cada vez que demos click en siguiente vamos a contabilizar el click y generaremos preguntas hasta el limite asigando
         en este caso es de 5
         */
-        if (contador < 5) {
+        if (contador < 9) {
             contador ++;
             labelRespCorrect.setText("");
             labRespUser.setText("");
@@ -109,11 +108,11 @@ public class ControllerVentanaPreguntasRestaFacil implements Initializable {
     
     private void generateQuestion() {
         // Genera una pregunta y opciones de respuesta aleatorias
-        int num1 = (int) (Math.random() * 20) + 1;
+        int num1 = (int) (Math.random() * 100) + 1;
         int num2 = 0;
         //Verificamos que el segundo numero sea menor que el primero
         do{
-            num2 = (int) (Math.random() * 10) + 1;
+            num2 = (int) (Math.random() * 100) + 1;
         }while(num2>=num1);
         
         int answer = num1 - num2;
@@ -195,3 +194,4 @@ public class ControllerVentanaPreguntasRestaFacil implements Initializable {
     }
 }
     
+

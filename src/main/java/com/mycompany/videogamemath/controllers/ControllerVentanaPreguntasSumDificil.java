@@ -16,8 +16,7 @@ import javafx.scene.control.Label;
 
 public class ControllerVentanaPreguntasSumDificil implements Initializable {
     
-    ControllerVentanaDificultadSuma controlador;
-   
+   //Declaramos los ID de los Botones, los Labels creados en SceneBuilder
     @FXML
     private Button btnIdA;
     @FXML
@@ -37,8 +36,7 @@ public class ControllerVentanaPreguntasSumDificil implements Initializable {
     @FXML
     private Label labelPuntos;
     
-    
-    
+    //Declaramos los OnAction de los botones
     @FXML      
     void btnA(ActionEvent event) {
         String text = btnIdA.getText();
@@ -80,7 +78,10 @@ public class ControllerVentanaPreguntasSumDificil implements Initializable {
 
     @FXML
     void btnSiguiente(ActionEvent event) throws IOException{
-        //siempre y cuando el contador sea menor a 15, se generara una nueva pregunta
+        /*
+        Cada vez que demos click en siguiente vamos a contabilizar el click y generaremos preguntas hasta el limite asigando
+        en este caso es de 5
+        */
         if (contador < 15) {
             contador ++;
             labelRespCorrect.setText("");
@@ -93,7 +94,7 @@ public class ControllerVentanaPreguntasSumDificil implements Initializable {
         }
     }
         
-
+    //Inicializamos la puntuacion, generamos la primera Operacion
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         puntos = 0;

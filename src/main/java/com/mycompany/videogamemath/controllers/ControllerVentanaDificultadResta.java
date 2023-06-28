@@ -21,8 +21,9 @@ public class ControllerVentanaDificultadResta {
     }
 
     @FXML
-    void btnNormalResta(ActionEvent event) {
+    void btnNormalResta(ActionEvent event) throws IOException {
         //Boton para la seleccion de la dificultad Normal
+        App.setRoot("VentanaPreguntasRestaNormal");
     }
 
     @FXML

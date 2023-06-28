@@ -16,8 +16,7 @@ import javafx.scene.control.Label;
 
 public class ControllerVentanaPreguntasSumNormal implements Initializable {
     
-    ControllerVentanaDificultadSuma controlador;
-   
+    //Declaramos los ID de los Botones, los Labels creados en SceneBuilder
     @FXML
     private Button btnIdA;
     @FXML
@@ -37,8 +36,7 @@ public class ControllerVentanaPreguntasSumNormal implements Initializable {
     @FXML
     private Label labelPuntos;
     
-    
-    
+    //Declaramos los OnAction de los botones    
     @FXML      
     void btnA(ActionEvent event) {
         String text = btnIdA.getText();
@@ -79,7 +77,10 @@ public class ControllerVentanaPreguntasSumNormal implements Initializable {
 
     @FXML
     void btnSiguiente(ActionEvent event) throws IOException{
-        
+        /*
+        Cada vez que demos click en siguiente vamos a contabilizar el click y generaremos preguntas hasta el limite asigando
+        en este caso es de 5
+        */
         if (contador < 9) {
             contador ++;
             labelRespCorrect.setText("");
@@ -92,7 +93,7 @@ public class ControllerVentanaPreguntasSumNormal implements Initializable {
         }
     }
         
-
+    //Inicializamos la puntuacion, generamos la primera Operacion
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         puntos = 0;
@@ -156,6 +157,7 @@ public class ControllerVentanaPreguntasSumNormal implements Initializable {
         }
     }
     
+    //Comparamos los dos campos de label donde se pondra la respuesta que elegimos y la respuesta correcta
     private Boolean compararRespuesta(){
         
         if(labelRespCorrect.getText() == labRespUser.getText()){
@@ -165,10 +167,12 @@ public class ControllerVentanaPreguntasSumNormal implements Initializable {
         }       
     }
     
+    //Vamos actualizando el Label donde se muestra los puntos obtenidos
     private void actualizarLabelPuntos(){
         labelPuntos.setText(String.valueOf(puntos));
     }
     
+    //Metodo para deshabilitar los botones
     private void DeshabilitarBotones(){
         btnIdA.setDisable(true);
         btnIdB.setDisable(true);
@@ -176,6 +180,7 @@ public class ControllerVentanaPreguntasSumNormal implements Initializable {
         btnIdD.setDisable(true);   
     }
     
+    //Metodo para hbailitar los botones
     private void HabilitarBotones(){
         btnIdA.setDisable(false);
         btnIdB.setDisable(false);
