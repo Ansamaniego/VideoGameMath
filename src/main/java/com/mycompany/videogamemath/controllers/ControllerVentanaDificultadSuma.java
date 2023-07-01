@@ -13,7 +13,7 @@ public class ControllerVentanaDificultadSuma {
     @FXML
     void btnDificilSuma(ActionEvent event) throws IOException {
         //Boton para la eleccion de la dificultad Dificil
-        App.setRoot("VentanaPreguntas");
+        App.setRoot("VentanaPreguntasSumDificil");
     }
 
     @FXML

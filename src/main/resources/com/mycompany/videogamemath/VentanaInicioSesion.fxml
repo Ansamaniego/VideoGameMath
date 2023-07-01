@@ -19,7 +19,7 @@
    <children>
       <Pane layoutX="100.0" layoutY="153.0" prefHeight="600.0" prefWidth="400.0" style="-fx-background-color: linear-gradient(to bottom, #FF0000, #0000FF); -fx-border-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <ImageView fitHeight="154.0" fitWidth="252.0" layoutX="74.0" layoutY="71.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="154.0" fitWidth="252.0" layoutX="74.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@Images/Logo.png" />
                </image>
@@ -49,16 +49,16 @@
                   </Label>
                   <StackPane prefHeight="30.0" prefWidth="252.0">
                      <children>
-                        <TextField fx:id="txtMaskPass" promptText="1234">
-                           <StackPane.margin>
-                              <Insets bottom="10.0" />
-                           </StackPane.margin>
-                        </TextField>
-                        <PasswordField fx:id="txtPass" promptText="1234">
+                        <PasswordField fx:id="txtPass" prefHeight="22.0" prefWidth="249.0" promptText="1234">
                            <StackPane.margin>
                               <Insets bottom="10.0" />
                            </StackPane.margin>
                         </PasswordField>
+                        <TextField fx:id="txtMaskPass" prefHeight="22.0" prefWidth="249.0" promptText="1234">
+                           <StackPane.margin>
+                              <Insets bottom="10.0" />
+                           </StackPane.margin>
+                        </TextField>
                      </children>
                   </StackPane>
                   <CheckBox fx:id="checkVerPass" mnemonicParsing="false" text="VER CONTRASEÑA" textFill="WHITE">
@@ -82,6 +82,11 @@
                </children>
             </HBox>
             <Button layoutX="143.0" layoutY="502.0" mnemonicParsing="false" onAction="#BtnVolverInicioSesion" prefHeight="42.0" prefWidth="115.0" text="VOLVER" />
+            <Label fx:id="labelIngresoErrado" alignment="CENTER" layoutX="73.0" layoutY="198.0" prefHeight="29.0" prefWidth="252.0" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
          </children>
       </Pane>
    </children>

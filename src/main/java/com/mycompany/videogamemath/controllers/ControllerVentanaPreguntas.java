@@ -73,14 +73,18 @@ public class ControllerVentanaPreguntas implements Initializable {
         DeshabilitarBotones();
     }
     
-    //Creamos un contador para controlar la cantidad de veces que vamos a generar una Operacion diferente
+    /*
+    Creamos un contador para controlar la cantidad de veces que vamos a
+    generar una Operacion diferente
+    */
     private int contador = 0;
 
     @FXML
     void btnSiguiente(ActionEvent event) throws IOException{
         
         /*
-        Cada vez que demos click en siguiente vamos a contabilizar el click y generaremos preguntas hasta el limite asigando
+        Cada vez que demos click en siguiente vamos a contabilizar el click 
+        y generaremos preguntas hasta el limite asigando
         en este caso es de 5
         */
         if (contador < 5) {

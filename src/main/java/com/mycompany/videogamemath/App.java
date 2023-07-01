@@ -22,6 +22,7 @@ public class App extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         scene = new Scene(loadFXML("VentanaInicial"), 400,600);
+        stage.setTitle("Math Minds");
         stage.setScene(scene);
         stage.show();
     }

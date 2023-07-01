@@ -14,8 +14,8 @@ public class ControllerVentanaInicial {
     @FXML
     void btnJugar(ActionEvent event) throws IOException {
         /*
-        Seleccionamos este Boton de Jugar, vamos a la pantalla de Inicio de sesion
-        donde se solicitara crear cuenta o iniciar sesion
+        Seleccionamos este Boton de Jugar, vamos a la pantalla de Inicio 
+        de sesion donde se solicitara crear cuenta o iniciar sesion
         */
         App.setRoot("VentanaInicioSesion");
     }
@@ -23,9 +23,9 @@ public class ControllerVentanaInicial {
     @FXML
     void btnJugarInvitado(ActionEvent event) throws IOException {
         /*
-        Seleccionamos este Boton de Jugar, vamos a la pantalla de Seleccion  de 
-        operacion, aqui no tendremos que iniciar sesion, por lo que nuestro progreso no se 
-        guardara.
+        Seleccionamos este Boton de Jugar, vamos a la pantalla de Seleccion de 
+        operacion, aqui no tendremos que iniciar sesion, por lo que nuestro 
+        progreso no se guardara.
         */
         App.setRoot("VentanaOperaciones");
     }
