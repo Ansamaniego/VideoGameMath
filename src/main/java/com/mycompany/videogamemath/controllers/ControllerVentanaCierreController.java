@@ -4,6 +4,8 @@
  */
 package com.mycompany.videogamemath.controllers;
 
+import com.mycompany.videogamemath.App;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -29,17 +31,22 @@ public class ControllerVentanaCierreController implements Initializable {
     private Label labelTextCierre;
 
     @FXML
-    void btnContinuar(ActionEvent event) {
-        
+    void btnContinuar(ActionEvent event) throws IOException {
+        App.setRoot("VentanaOperaciones");
     }
 
-
-    /**
-     * Initializes the controller class.
-     */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        mensaje();
+
+    }
+    
+    public void mensaje(){
+        labelPuntaje.setText("00000");
+        labelREspCorrectas.setText("Coming soon");
+        labelTextCierre.setText("Coming soon");
+        
+        
     }
     
     

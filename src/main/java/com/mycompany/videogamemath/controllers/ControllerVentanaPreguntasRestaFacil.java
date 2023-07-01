@@ -90,7 +90,7 @@ public class ControllerVentanaPreguntasRestaFacil implements Initializable {
             HabilitarBotones();
         }
         else{
-            App.setRoot("VentanaOperaciones");
+            App.setRoot("VentanaCierre");
         }
     }
         

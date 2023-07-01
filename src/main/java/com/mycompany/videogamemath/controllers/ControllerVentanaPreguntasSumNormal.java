@@ -89,7 +89,7 @@ public class ControllerVentanaPreguntasSumNormal implements Initializable {
             HabilitarBotones();
         }
         else{
-            App.setRoot("VentanaOperaciones");
+            App.setRoot("VentanaCierre");
         }
     }
         
