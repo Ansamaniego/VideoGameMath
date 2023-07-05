@@ -34,8 +34,7 @@ public class ControllerVentanaPreguntas implements Initializable {
     private Label questionlabel;
     @FXML
     private Label labelPuntos;
-    
-    
+
     //Declaramos los OnAction de los botones
     @FXML      
     void btnA(ActionEvent event) {
@@ -77,7 +76,7 @@ public class ControllerVentanaPreguntas implements Initializable {
     Creamos un contador para controlar la cantidad de veces que vamos a
     generar una Operacion diferente
     */
-    private int contador = 0;
+    private int contador = 1;
 
     @FXML
     void btnSiguiente(ActionEvent event) throws IOException{
@@ -120,12 +119,27 @@ public class ControllerVentanaPreguntas implements Initializable {
 
         currentQuestion = num1 + " + " + num2 + " = ?";
         correctAnswer = Integer.toString(answer);
-
+        
+        
+        /*Elegimos los numeros que vamos a colocar en los botones y comparamos
+        que no se repitan*/
+        int num1btn = (int) (answer - (Math.random() * 5) + 1);
+        if(num1btn == answer)
+            num1btn = (int) (answer - (Math.random() * 5) + 1);
+          
+        int num2btn = (int) (answer + (Math.random() * 6) + 1);
+        if(answer == num2btn || num2btn == num1btn)
+            num2btn = (int) (answer - (Math.random() * 5) + 1);
+            
+        int num3btn = (int) (answer - (Math.random() * 9) + 1);
+        if(answer == num3btn || num3btn == num1btn || num3btn == num2btn)
+            num3btn = (int) (answer - (Math.random() * 5) + 1);
+        
         // Genera tres respuestas incorrectas
         answerOptions = new ArrayList<>();
-        answerOptions.add(Integer.toString(answer - (int) (Math.random() * 5) + 1));
-        answerOptions.add(Integer.toString(answer + (int) (Math.random() * 6) + 1));
-        answerOptions.add(Integer.toString(answer - (int) (Math.random() * 9) + 1));
+        answerOptions.add(Integer.toString(num1btn));
+        answerOptions.add(Integer.toString(num2btn));
+        answerOptions.add(Integer.toString( num3btn ));
 
         // Agrega la respuesta correcta a las opciones
         answerOptions.add(correctAnswer);
@@ -152,8 +166,7 @@ public class ControllerVentanaPreguntas implements Initializable {
     }
     
     //Inicializamos la puntuacion en 0
-    int puntos = 0;
-    
+    int puntos = 0;   
     
     private void updatePointsLabel() {
                       
@@ -193,5 +206,6 @@ public class ControllerVentanaPreguntas implements Initializable {
         btnIdC.setDisable(false);
         btnIdD.setDisable(false); 
     }
+    
 }
     

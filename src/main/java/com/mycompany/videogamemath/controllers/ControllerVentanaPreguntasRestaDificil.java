@@ -8,15 +8,14 @@ import java.util.List;
 import java.util.Random;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 
-public class ControllerVentanaPreguntasSumNormal implements Initializable {
+public class ControllerVentanaPreguntasRestaDificil implements Initializable {
     
-    //Declaramos los ID de los Botones, los Labels creados en SceneBuilder
+   //Declaramos los ID de los Botones, los Labels creados en SceneBuilder
     @FXML
     private Button btnIdA;
     @FXML
@@ -36,7 +35,7 @@ public class ControllerVentanaPreguntasSumNormal implements Initializable {
     @FXML
     private Label labelPuntos;
     
-    //Declaramos los OnAction de los botones    
+    //Declaramos los OnAction de los botones
     @FXML      
     void btnA(ActionEvent event) {
         String text = btnIdA.getText();
@@ -73,6 +72,7 @@ public class ControllerVentanaPreguntasSumNormal implements Initializable {
         DeshabilitarBotones();
     }
     
+    //Creamos un contador de las veces que oprimimos el boton siguiente
     private int contador = 0;
 
     @FXML
@@ -81,7 +81,7 @@ public class ControllerVentanaPreguntasSumNormal implements Initializable {
         Cada vez que demos click en siguiente vamos a contabilizar el click y generaremos preguntas hasta el limite asigando
         en este caso es de 5
         */
-        if (contador < 9) {
+        if (contador < 15) {
             contador ++;
             labelRespCorrect.setText("");
             labRespUser.setText("");
@@ -110,29 +110,17 @@ public class ControllerVentanaPreguntasSumNormal implements Initializable {
         // Genera una pregunta y opciones de respuesta aleatorias
         int num1 = (int) (Math.random() * 100) + 1;
         int num2 = (int) (Math.random() * 100) + 1;
-        int answer = num1 + num2;
+      
+        int answer = num1 - num2;
 
-        currentQuestion = num1 + " + " + num2 + " = ?";
+        currentQuestion = num1 + " - " + num2 + " = ?";
         correctAnswer = Integer.toString(answer);
-        
-        /*Elegimos los numeros que vamos a colocar en los botones y comparamos
-        que no se repitan*/
-        int num1btn = (int) (answer - (Math.random() * 10) + 1);
-        int num2btn = (int) (answer + (Math.random() * 10) + 1);
-        int num3btn = (int) (answer - (Math.random() * 10) + 1);
-        
-        //Mientras algun numero sea igual a los otros se generara uno random hasta que sean diferentes
-        while(num1btn == num2btn || num1btn == num3btn || num2btn == num3btn){
-            num1btn = (int) (answer - (Math.random() * 10) + 1);
-            num3btn = (int) (answer - (Math.random() * 10) + 1);
-        }
-        
-        
+
         // Genera tres respuestas incorrectas
         answerOptions = new ArrayList<>();
-        answerOptions.add(Integer.toString(num1btn));
-        answerOptions.add(Integer.toString(num2btn));
-        answerOptions.add(Integer.toString(num3btn));
+        answerOptions.add(Integer.toString(answer - (int) (Math.random() * 10) + 1));
+        answerOptions.add(Integer.toString(answer + (int) (Math.random() * 10) + 1));
+        answerOptions.add(Integer.toString(answer - (int) (Math.random() * 10) + 1));
 
         // Agrega la respuesta correcta a las opciones
         answerOptions.add(correctAnswer);
@@ -159,7 +147,7 @@ public class ControllerVentanaPreguntasSumNormal implements Initializable {
     }
     
     //Inicializamos la puntuacion en 0
-    int puntos = 0;
+    int puntos = 1;
     
     
     private void updatePointsLabel() {
@@ -202,3 +190,4 @@ public class ControllerVentanaPreguntasSumNormal implements Initializable {
     }
 }
     
+

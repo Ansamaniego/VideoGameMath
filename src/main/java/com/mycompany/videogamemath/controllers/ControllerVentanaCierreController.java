@@ -12,6 +12,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
+import com.mycompany.videogamemath.controllers.ControllerVentanaPreguntas;
 
 /**
  * FXML Controller class
@@ -20,6 +21,8 @@ import javafx.scene.control.Label;
  */
 public class ControllerVentanaCierreController implements Initializable {
     
+    ControllerVentanaPreguntas controlador;
+
     
     @FXML
     private Label labelPuntaje;
@@ -35,13 +38,17 @@ public class ControllerVentanaCierreController implements Initializable {
         App.setRoot("VentanaOperaciones");
     }
 
+    //int puntos = controlador.setPuntos(0);
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         mensaje();
-
     }
     
+    
+    
     public void mensaje(){
+        
         labelPuntaje.setText("00000");
         labelREspCorrectas.setText("Coming soon");
         labelTextCierre.setText("Coming soon");
